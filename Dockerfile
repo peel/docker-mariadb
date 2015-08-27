@@ -10,9 +10,9 @@ RUN locale-gen en_US.UTF-8
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Install MariaDB from repository.
-RUN echo "deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu trusty main" > /etc/apt/sources.list.d/mariadb.list && \
+RUN echo "deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/ubuntu trusty main" > /etc/apt/sources.list.d/mariadb.list && \
     apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes mariadb-server mariadb-server-5.5
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes mariadb-server mariadb-server-10.0
 
 # Install other tools.
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y pwgen inotify-tools

@@ -1,6 +1,6 @@
 # docker-mariadb
 
-A Dockerfile that produces a container that will run [MariaDB][mariadb] 5.5,
+A Dockerfile that produces a container that will run [MariaDB][mariadb] 5.5 or 10.0 (use tag 10.0)
 a drop-in replacement for MySQL.
 
 [mariadb]: https://mariadb.org/
